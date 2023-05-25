@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Студенты</title>
+        <style>
+          /* Стили для таблицы */
+          table {
+            border-collapse: collapse;
+            width: 100%;
+          }
+          th, td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+          }
+          th {
+            background-color: #f2f2f2;
+          }
+          tr:nth-child(even) {
+            background-color: #f2f2f2;
+          }
+          /* Стили для формы */
+          form {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+          }
+          form label {
+            display: inline-block;
+            width: 120px;
+            margin-bottom: 10px;
+          }
+          form input, form select {
+            width: 200px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px;
+          }
+          form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+          form button:hover {
+            background-color: #3e8e41;
+          }
+          caption {
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+        </style>
+      </head>
+  <body>
+    <table id="students">
+      <caption>Таблица студентов</caption>
+      <thead>
+        <tr>
+            <th style="width: 30%;">Имя студента</th>
+            <th style="width: 20%;">Пол</th>
+            <th style="width: 25%;">Дата рождения</th>
+            <th style="width: 25%;">Возраст</th>
+          </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <form>
+      <h2>Форма добавления студентов</h2>
+      <label>Имя студента:</label>
+      <input type="text" id="name">
+      <br>
+      <label>Дата рождения:</label>
+      <input type="date" id="birthdate">
+      <br>
+      <label>Пол:</label>
+      <select id="gender">
+        <option value="male">Мужчина</option>
+        <option value="female">Женщина</option>
+      </select>
+      <br>
+      <button type="button" id="addStudent">Добавить</button>
+    </form>
+    <table>
+      <tr>
+        <td>Средний возраст студентов:</td>
+        <td id="averageAge"></td>
+      </tr>
+    </table>
+    <script src="script.js"></script>
+  </body>
+</html>
